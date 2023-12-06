@@ -8,6 +8,8 @@ class BooksListViewLoadingIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        shrinkWrap: true,
+        padding: EdgeInsets.zero,
         itemCount: 20,
         itemBuilder: (context, index) =>
             const BookListViewItemLoadingIndicator());

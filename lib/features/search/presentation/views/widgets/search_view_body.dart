@@ -1,9 +1,9 @@
-import 'package:bookly_app_clean_arch/features/search/presentation/manager/search_books_cubit/search_books_cubit.dart';
 import 'package:bookly_app_clean_arch/features/search/presentation/views/widgets/search_list_view_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/styles.dart';
+import '../../manager/search_books_cubit/search_books_cubit.dart';
 import 'custom_search_text_field.dart';
 
 class SearchViewBody extends StatefulWidget {
@@ -24,9 +24,6 @@ class _SearchViewBodyState extends State<SearchViewBody> {
     super.initState();
     scrollController = ScrollController();
     scrollController.addListener(scrollListener);
-    searchController.addListener(() {
-      setState(() {});
-    });
   }
 
   void scrollListener() async {

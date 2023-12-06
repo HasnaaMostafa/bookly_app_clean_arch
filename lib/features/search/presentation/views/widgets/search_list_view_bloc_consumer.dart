@@ -28,6 +28,9 @@ class _SearchListViewBlocConsumerState
   Widget build(BuildContext context) {
     return BlocConsumer<SearchBooksCubit, SearchBooksState>(
       listener: (context, state) {
+        if (state is SearchBooksLoading) {
+          books.clear();
+        }
         if (state is SearchBooksSuccess) {
           books.addAll(state.books);
         }
